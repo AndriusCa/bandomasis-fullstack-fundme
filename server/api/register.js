@@ -1,10 +1,12 @@
-import express from "express"
-import { connection } from "../setupDb.js"
+import express from "express";
+import { connection } from "../setupDb.js";
+import { hash } from "../lib/hash.js";
 
 export const register = express.Router()
 
 register.post("/", async (req, res) => {
   const { fullname, email, password } = req.body
+  console.log(fullname, email, password)
 
   try {
     const selectQuery = `SELECT * FROM users WHERE email = ?;`
@@ -27,8 +29,9 @@ register.post("/", async (req, res) => {
     const insertRes = await connection.execute(insertQuery, [
       fullname,
       email,
-      password,
+      hash(password),
     ])
+
     const insertResObject = insertRes[0]
 
     if (insertResObject.insertId > 0) {
@@ -43,6 +46,7 @@ register.post("/", async (req, res) => {
       })
     }
   } catch (error) {
+    console.log(error)
     return res.status(500).json({
       status: "err",
       msg: "POST: REGISTER API - server error.",
@@ -52,4 +56,4 @@ register.post("/", async (req, res) => {
 
 register.use((req, res, next) => {
   return res.status(404).json({ msg: 'Unsupported "Register" method' })
-});
+})
