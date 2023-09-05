@@ -6,31 +6,31 @@ export function Footer() {
       <footer className="py-5">
         <div className="row">
           <div className="col-6 col-md-2 mb-3">
-            <h5>Ieškantiems darbo</h5>
+            <h5>Finansuoti</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
                 <Link to="/" className="nav-link p-0 text-body-secondary">
-                  Darbo skelbimai
+                  Švietimas
                 </Link>
               </li>
               <li className="nav-item mb-2">
                 <Link to="/" className="nav-link p-0 text-body-secondary">
-                  Darbo paieška
+                  Labdara
                 </Link>
               </li>
               <li className="nav-item mb-2">
                 <Link to="/" className="nav-link p-0 text-body-secondary">
-                  Naujausi darbo skelbimai
+                  Bendruomenė
                 </Link>
               </li>
               <li className="nav-item mb-2">
                 <Link to="/" className="nav-link p-0 text-body-secondary">
-                  Skelbimai pagal vietą
+                  Šeima
                 </Link>
               </li>
               <li className="nav-item mb-2">
                 <Link to="/" className="nav-link p-0 text-body-secondary">
-                  Skelbimai pagal kategoriją
+                  Sportas
                 </Link>
               </li>
             </ul>
