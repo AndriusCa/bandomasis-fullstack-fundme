@@ -1,5 +1,5 @@
 import express from "express";
-import { connection } from "../setupDb.js";
+import { connection } from "../setupDB.js";
 import { hash } from "../lib/hash.js";
 
 export const register = express.Router()
