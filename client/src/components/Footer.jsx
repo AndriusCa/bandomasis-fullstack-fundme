@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Subscribe } from "./Subscribe";
 
 export function Footer() {
   return (
@@ -66,23 +67,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="col-md-5 offset-md-1 mb-3">
-            <form>
-              <h5>Užsiprenumeruokite mūsų naujienlaiškį</h5>
-              <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-                <label htmlFor="newsletter1" className="visually-hidden">
-                  Email address
-                </label>
-                <input
-                  id="newsletter1"
-                  type="text"
-                  className="form-control"
-                  placeholder="Jūsų el. pašto adresas"
-                />
-                <button className="btn btn-primary" type="button">
-                  Prenumeruoti
-                </button>
-              </div>
-            </form>
+            <Subscribe />
           </div>
         </div>
         <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
@@ -90,5 +75,5 @@ export function Footer() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

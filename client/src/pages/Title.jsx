@@ -6,7 +6,7 @@ export function Title({title, uri}) {
       <h1 className="h2">{title}</h1>
       <div className="btn-toolbar mb-2 mb-md-0">
         {uri ? <Link className="btn btn-primary " to={uri}>
-          Create new
+          Sukurti naują
         </Link> : null}
       </div>
     </div>
