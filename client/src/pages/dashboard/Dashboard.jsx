@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AdminDashboard } from "./AdminDashboard.jsx";
-import { EmployerDashboard } from "./EmployerDashboard";
+import { UserDashboard } from "./UserDashboard";
 import { GlobalContext } from "../../context/GlobalContext";
 import { Forbiden } from "../../components/error/Forbiden";
 
@@ -11,8 +11,8 @@ export function Dashboard() {
     return <AdminDashboard />;
   }
 
-  if (role === "employer") {
-    return <EmployerDashboard />
+  if (role === "user") {
+    return <UserDashboard />
   }
 
   return <Forbiden/>;
