@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import { Forbiden } from "../../components/error/Forbiden";
 import { Title } from "../Title";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export function AdminNewFundriserType() {
   const navigate = useNavigate();
@@ -43,16 +43,36 @@ export function AdminNewFundriserType() {
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <Title title="New fundriser type" />
+          <Title title="Naujas fondo tipas" />
         </div>
         <div>
-        <form onSubmit={submitHandler} className="col-12 col-sm-8 col-md-6 col-lg-4">
+          <form
+            onSubmit={submitHandler}
+            className="col-12 col-sm-8 col-md-6 col-lg-4"
+          >
             <div className="mb-3">
-                <label className="form-label" htmlFor="fundriserType">Fundriser type</label>
-                <input onChange={e => setText(e.target.value)} value={text} type="text" className="form-control" id="fundriserType" />
+              <label className="form-label" htmlFor="fundriserType">
+                Fondo tipas
+              </label>
+              <input
+                onChange={(e) => setText(e.target.value)}
+                value={text}
+                type="text"
+                className="form-control"
+                id="fundriserType"
+              />
             </div>
-            <button className="btn btn-primary py-2" type="submit">Create</button>
-        </form>
+            <button className="btn btn-primary py-2 me-2" type="submit">
+              Sukurti
+            </button>
+            <Link
+              to="/fundriser-types"
+              className="btn btn btn-outline-secondary py-2"
+              type="cancel"
+            >
+              Atšaukti
+            </Link>
+          </form>
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ export function AdminFundriserTypes() {
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <Title title="Fundriser tipai" uri="/fundriser-types/new" />
+          <Title title="Fondų tipai" uri="/fundriser-types/new" />
         </div>
         <div className="col-12"><FundriserTypesTable /></div>
       </div>
