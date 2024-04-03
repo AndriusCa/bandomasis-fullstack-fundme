@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react"
-import { formatDate } from "../../lib/formatDate"
-import { useContext } from "react"
-import { GlobalContext } from "../../context/GlobalContext"
+import { useState, useEffect } from "react";
+import { formatDate } from "../../lib/formatDate";
+import { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalContext";
 
 export function UsersTable() {
   const [users, setUsers] = useState([])

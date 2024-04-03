@@ -45,7 +45,7 @@ export function AdminEditFundriserType() {
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <Title title="Edit fundriser type" />
+          <Title title="Readaguoti fondo tipa" />
         </div>
         <div>
           <form
@@ -54,7 +54,7 @@ export function AdminEditFundriserType() {
           >
             <div className="mb-3">
               <label className="form-label" htmlFor="fundriserType">
-                Fundriser type
+                Fondo tipas
               </label>
               <input
                 onChange={(e) => setText(e.target.value)}
@@ -64,11 +64,11 @@ export function AdminEditFundriserType() {
                 id="fundriserType"
               />
             </div>
-            <button className="btn btn-primary py-2" type="submit">
-              Update
+            <button className="btn btn-primary py-2 me-2" type="submit">
+              Atnaujinti
             </button>
             <Link to="/fundriser-types" className="btn btn btn-outline-secondary py-2" type="submit">
-              Cancel
+              Atšaukti
             </Link>
           </form>
         </div>

@@ -46,13 +46,13 @@ export function Header() {
       <div className="dropdown text-end">
         <div className="text-end">
           <Link to="/dashboard" className="btn btn-primary me-2">
-            Dashboard
+            Darbalaukis
           </Link>
           <Link to="/users" className="btn btn-primary me-2">
-            Users
+            Vartotojai
           </Link>
-          <Link to="/job-types" className="btn btn-primary me-2">
-            Job types
+          <Link to="/fundriser-types" className="btn btn-primary me-2">
+            Fondai
           </Link>
           <button onClick={logMeOut} className="btn btn-primary" type="button">
             Atsijungti
@@ -62,12 +62,12 @@ export function Header() {
     </>
   )
 
-  const employerLinks = (
+  const userLinks = (
     <>
       <div className="dropdown text-end">
         <div className="text-end">
           <Link to="/dashboard" className="btn btn-primary me-2">
-            Dashboard
+            Darbalaukis
           </Link>
           <button onClick={logMeOut} className="btn btn-primary" type="button">
             Atsijungti
@@ -80,8 +80,8 @@ export function Header() {
   let extraLinks = <></>
   if (role === "admin") {
     extraLinks = adminLinks
-  } else if (role === "employer") {
-    extraLinks = employerLinks
+  } else if (role === "user") {
+    extraLinks = userLinks
   } else {
     extraLinks = publicLinks
   }
